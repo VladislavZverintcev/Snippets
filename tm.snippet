@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Timer</Title>
+            <Shortcut>tm</Shortcut>
+            <Description>Code snippet for a timer</Description>
+            <Author>VladislavZverintcev</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>field</ID>
+                    <ToolTip>field Name</ToolTip>
+                    <Default>MyTimer</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[
+				
+//In Fields
+private System.Timers.Timer $field$;
+
+//To Ctor
+Set$field$();
+
+//To Methods
+private void Set$field$()
+        {
+            $field$ = new System.Timers.Timer(1000);
+            $field$.Elapsed += OnTimedEvent;
+            $field$.Enabled = true;
+        }
+private void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            //try
+            //{
+                //Dispatcher.FromThread(ownerThread)?.Invoke(() => SomeMethod());
+            //}
+            //catch(System.Threading.Tasks.TaskCanceledException)
+            //{ return; }
+        }
+
+$end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

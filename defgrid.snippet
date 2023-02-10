@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>defgrid</Title>
+      <Description>Фрагмент кода для Grid по умолчанию в XAML</Description>
+      <Author>semfady</Author>
+      <Shortcut>defgrid</Shortcut>
+    </Header>
+	 <Declarations>
+        <Literal>
+          <ID>GridName</ID>
+          <ToolTip>Имя Grid</ToolTip>
+          <Default>GridName</Default>
+        </Literal>
+      </Declarations>
+    <Snippet>
+      <Code Language="xaml">
+        <![CDATA[
+			<Grid x:Name="$GridName$">
+				<Grid.RowDefinitions>
+					
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+				
+				</Grid.ColumnDefinitions>
+			</Grid>
+		$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

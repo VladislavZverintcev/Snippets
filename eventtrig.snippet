@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>eventtrig</Title>
+      <Description>Фрагмент кода для триггера событий в XAML</Description>
+      <Author>semfady</Author>
+      <Shortcut>eventtrig</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="xaml">
+        <![CDATA[
+			<EventTrigger RoutedEvent="NameEvent">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+							<DoubleAnimation
+								Storyboard.TargetProperty="Width"
+								From="0"
+								To="100"
+								Duration="0:0:4"
+								AutoReverse="True"/>
+								<!-- You can add any animation of your own -->
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+		$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
